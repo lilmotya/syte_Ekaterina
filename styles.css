@@ -1,0 +1,147 @@
+:root{
+  --bg:#071021;
+  --card:#0b1a2a;
+  --accent:#ff6b6b;
+  --muted:#9fb0c8;
+  --text:#ecf5ff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, Helvetica, sans-serif;background:linear-gradient(180deg,var(--bg),#021018);color:var(--text);line-height:1.5}
+.container{max-width:920px;margin:0 auto;padding:24px}
+.hero {
+  height: 350px; /* или больше, если хочешь высокий хедер */
+  background-image: url('data/assets/video.mp4'); /* путь к картинке */
+  background-size: cover;       /* растягиваем на всю секцию */
+  background-position: center -150px;  /* центрируем картинку */
+  background-repeat: no-repeat; /* не повторяем */
+  position: relative;           /* для overlay */
+  color: white;                 /* текст на фоне */
+}
+
+
+
+.video-text .bg-video {
+  position: absolute;
+  background-size: cover;       /* растягиваем на всю секцию */
+  top: 0; left: 0;
+  width: 100%;
+  height: 135%;
+  object-fit: cover; /* видео полностью покрывает блок */
+  z-index: 1;
+}
+
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* затемнение, чтобы текст читался */
+}
+
+.hero * {
+  position: relative;
+  z-index: 2; /* текст выше затемнения */
+}
+
+.hero .container {
+  text-align: center;
+  padding-top: 80px; /* отступ сверху, чтобы текст был не у самого края */
+}
+.band-name{font-size:40px;letter-spacing:1px;margin:0;color:var(--accent);font-weight:700;
+text-shadow:
+  1px 1px 0 black,
+  -1px 1px 0 black,
+  1px -1px 0 black,
+  -1px -1px 0 black;}
+.tagline{color:var(--muted);margin-top:8px;
+}
+.buttons{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:600;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,0.45)}
+
+main{padding:24px 0}
+h2{margin-top:0}
+.muted{color:var(--muted);font-size:14px}
+
+#tracks-table{width:100%;border-collapse:collapse;margin-top:12px;background:rgba(255,255,255,0.02);border-radius:8px;overflow:hidden}
+#tracks-table thead tr{background:rgba(255,255,255,0.03)}
+#tracks-table th,#tracks-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:15px}
+#tracks-table tbody tr:hover{background:rgba(255,255,255,0.02)}
+
+.card{display:flex;gap:16px;align-items:center;background:var(--card);padding:12px;border-radius:10px;margin-top:12px}
+.cover{width:120px;height:120px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9a9a)}
+
+.album-cover {
+  width: 150px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.album-cover:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.fact-photo1 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-photo1:hover {
+  transform: scale(2); /* увеличение */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* усиление тени */
+}
+
+.facts-list li img {
+  display: block;
+  max-width: 30%;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Скрываем точку у <li>, если внутри есть картинка */
+.facts-list li:has(img) {
+  list-style-type: none;
+  padding-left: 0; /* чтобы текст не смещался */
+}
+
+.footer{padding:18px 0;text-align:center;color:var(--muted);font-size:13px}
+code{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px}
+
+#fun-facts {
+  padding: 40px 20px;
+  background-color: rgba(10, 10, 30, 0.9); /* полупрозрачный фон */
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 900px;
+  color: #fff;
+}
+
+#fun-facts h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: var(--accent);
+}
+
+.facts-list {
+  list-style-type: disc;
+  padding-left: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.facts-list li {
+  margin-bottom: 10px;
+}
