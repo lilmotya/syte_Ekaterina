@@ -30,8 +30,6 @@ body{margin:0;font-family:Arial, Helvetica, sans-serif;background:linear-gradien
   z-index: 1;
 }
 
-
-
 .hero::after {
   content: "";
   position: absolute;
@@ -116,6 +114,88 @@ h2{margin-top:0}
   padding-left: 0; /* чтобы текст не смещался */
 }
 
+/* Обёртка — центрируем всё */
+.vinyl-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+
+
+.vinyl-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+/* Пластинка */
+.vinyl {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at center, #ffffff 0 14%, transparent 15%),
+        repeating-radial-gradient(
+            circle,
+            #e6e6e6 0 3px,
+            #f5f5f5 4px 6px
+        );
+    box-shadow:
+        0 0 0 6px rgba(255,255,255,0.3),
+        0 20px 40px rgba(0,0,0,0.4);
+    position: relative;
+    animation: spin 6s linear infinite;
+    display: block;
+}
+
+
+
+/* центр пластинки */
+.vinyl-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #0b1c3d; /* под цвет фона */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid white;
+}
+
+
+
+/* при наведении */
+.vinyl:hover {
+    transform: scale(1.05);
+}
+
+/* текст под кнопкой */
+.vinyl-text {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+
+
+/* анимация вращения */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
 .footer{padding:18px 0;text-align:center;color:var(--muted);font-size:13px}
 code{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px}
 
@@ -145,3 +225,67 @@ code{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:4px}
 .facts-list li {
   margin-bottom: 10px;
 }
+
+
+/* Базовый стиль кнопки */
+.btn {
+    display: inline-block; /* ОБЯЗАТЕЛЬНО */
+    text-decoration: none;
+    color: white;
+    background-color: #1DB954; /* Spotify green */
+    border-radius: 999px;      /* круглая */
+    transition: transform 0.3s ease;
+}
+
+.btn-main {
+    padding: 22px 60px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+.btn-main {
+    background-color: #1DB954;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Размер */
+.big-btn {
+    padding: 20px 56px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Hover */
+.btn:hover {
+    transform: scale(1.08);
+}
+
+.btn-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(29, 185, 84, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(29, 185, 84, 0);
+    }
+}
+
+
+.main-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+
+

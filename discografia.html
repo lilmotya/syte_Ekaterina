@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Руки Вверх! — Фан-страница (Учебный проект)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="video-text">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="data/assets/video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <h1 class="band-name">Руки Вверх!</h1>
+      <p class="tagline">Легенды поп-музыки — хиты, которые знает вся страна.</p>
+      <div class="buttons">
+        <a class="btn" href="https://ru.wikipedia.org/wiki/Руки_Вверх!" target="_blank" rel="noopener">Wikipedия</a>
+        <a class="btn" href="https://www.youtube.com/results?search_query=руки+вверх" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://open.spotify.com/search/Руки%20Вверх" target="_blank" rel="noopener">Spotify</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>Дискография</h2>
+      <p> На этой странице представлены самые популярные альбомы группы и их треки</p>
+    </section>
+
+    
+    <section id="tracks">
+      <h2>Избранные треки</h2>
+<!--     <p class="muted">Список загружается из CSV-файла <code>data/tracks.csv</code>. Можно заменить на свои данные.</p>  --> 
+      <table id="tracks-table">
+        <thead>
+          <tr><th>Название</th><th>Длительность</th><th>Год</th><th>Слушать</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <div class="card">
+        <a href="https://music.yandex.ru/album/4517953" target="_blank">
+        <img src="data/assets/orig.jpg" alt="Обложка альбома" class="album-cover">
+        </a>  
+        
+      <div class="card-body">
+        <h3>Название альбома — Здравствуй, это я</h3>
+        <p> </p>
+      </div>
+      </div>
+
+      <div class="card">
+        <a href="https://music.yandex.ru/album/4517962" target="_blank">
+        <img src="data/assets/orig3.jpg" alt="Обложка альбома" class="album-cover">
+        </a>  
+        
+      <div class="card-body">
+        <h3>Название альбома — Не бойся, я с тобой!</h3>
+        <p> </p>
+      </div>
+      </div>      
+
+      <div class="card">
+        <a href="https://music.yandex.ru/album/22642152" target="_blank">
+        <img src="data/assets/jrig2.jpg" alt="Обложка альбома" class="album-cover">
+        </a>  
+        
+      <div class="card-body">
+        <h3>Название альбома — Ай-яй-яй 2020</h3>
+        <p> </p>
+      </div>
+      </div>
+
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Сайт сделала студентка группы БЭР2302 Шклярова Екатерина</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
